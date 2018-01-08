@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+  <groupId>demos</groupId>
+  <version>0.0.2</version>
+	<artifactId>spring-cloud-stream-sftp2s3</artifactId>
+	<packaging>jar</packaging>
+
+	<name>spring-cloud-stream-sftp2s3</name>
+	<description>SFTP source and S3 Sink aggregated together</description>
+
+
+  <repositories>
+    <repository> 
+        <id>repository.spring.release</id> 
+        <name>Spring GA Repository</name> 
+        <url>http://repo.spring.io/release</url> 
+    </repository>
+</repositories>
+	<properties>
+		<start-class>demos.Sftp2S3Stream</start-class>
+	</properties>
+
+  <dependencies>
+    <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+    <version>1.5.9.RELEASE</version>
+</dependency>
+    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream</artifactId>
+    <version>Ditmars.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+    <version>Ditmars.RELEASE</version>
+		</dependency>
+       <dependency>
+      <groupId>org.springframework.cloud.stream.app</groupId>
+      <artifactId>sftp-source-kafka-10</artifactId>
+      <version>1.3.1.RELEASE</version>
+    </dependency>
+<dependency>
+    <groupId>org.springframework.cloud.stream.app</groupId>
+    <artifactId>s3-sink-kafka-10</artifactId>
+    <version>1.3.1.RELEASE</version>
+</dependency>
+   <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-stream</artifactId>
+    <version>1.3.1.RELEASE</version>
+</dependency> 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-configuration-processor</artifactId>
+    <version>1.5.9.RELEASE</version>
+</dependency>
+	</dependencies>
+<build>
+  <plugins>
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>1.4.2.RELEASE</version>
+				<configuration>
+					<classifier>exec</classifier>
+          <mainClass>demos.Sftp2S3Stream</mainClass>
+        <layout>ZIP</layout>
+				</configuration>
+    </plugin>
+			</plugins>
+</build>
+</project>
+

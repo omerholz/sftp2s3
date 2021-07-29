@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-    <version>Ditmars.RELEASE</version>
+    <version>1.5.22.RELEASE</version>
 		</dependency>
        <dependency>
       <groupId>org.springframework.cloud.stream.app</groupId>
@@ -62,7 +62,7 @@
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-configuration-processor</artifactId>
-    <version>1.5.9.RELEASE</version>
+    <version>1.5.22.RELEASE</version>
 </dependency>
 	</dependencies>
 <build>
